@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>test2</title>
+        <link rel="stylesheet" type="text/css" href="test2.css">
+    </head>
+    <body>
+        <div class="header">
+        <h1>My Title</h1>
+        </div>
+        <div class="topnav">
+            <a href="">body</a>
+            <a href="https://egame.qq.com/?adtag=10001000555" target="testframe">connection</a>
+            <a href="" style="float: right;">submit</a>
+        </div>
+        <div class="row">
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>the first title</h2>
+                    <h5 onmouseover="mOver(this)" onmouseout="mOut(this)">time...</h5>
+                    <div class="img">
+                        <iframe src="myframe.htm" frameborder="0" name="testframe" width="1000" height="600"></iframe>
+                    </div>
+                    <p>some paragraphs</p>
+                </div>
+                <div class="card">
+                    <h2>the second title</h2>
+                    <h5>time...</h5>
+                    <div class="img">picture...</div>
+                    <p>some paragraphs...</p>
+                </div>
+            </div>
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>about me</h2>
+                    <div class="img">pic...</div>
+                    <form action="">
+                        <label for="Your Name">Your Name</label>
+                        <input type="text" name="your name" id="Your Name" onchange="upper()">
+                    </form>
+                </div>
+                <div class="card">
+                    <button type="button" onclick="myfuction()">about me</button>
+                    <p id="demo">my info...</p>
+                </div>
+                <div class="card">
+                    <h2>my pics</h2>
+                    <div class="img">some pics...</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>@footer</p>
+        </div>
+
+        <script src="test2.js"></script>
+        
+    </body> 
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./homework.css">
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="header">
+            <div class="date">
+                <p class="time">W12 D5</p>
+            </div>
+            <div class="input">
+                <p class="money" id="money">1948343</p>
+            </div>
+        </div>
+        <div class="cookarea">
+            <div class="cook">
+                <button class="chef chef1">
+                    <img src="./picture/iconfinder_Chef-2_379358.png" alt="cook" class="cook">
+                </button>
+                <div class="prog">
+                    <progress class="work work1" value="50" max="100"></progress>
+                    <span class="menu"><b>UL炖LI</b></span>
+                </div>
+            </div>
+            <div class="cook">
+                <button class="chef chef2">
+                    <img src="./picture/iconfinder_Chef-2_379358.png" alt="cook" class="cook">
+                </button>
+                <img src="./picture/iconfinder_Food-Dome_379366.png" alt="food-dome" class="food-dome">
+                <div class="prog">
+                    <progress class="work work2" value="100" max="100"></progress>
+                    <span class="menu"><b>鲜榨flex</b></span>
+                </div>
+            </div>
+            <div class="cook">
+                <button class="chef chef3">
+                    <img src="./picture/iconfinder_Chef-2_379358.png" alt="cook" class="cook">
+                </button>
+                <div class="prog">
+                    <progress class="work work3" value="80" max="100"></progress>
+                    <span class="menu"><b>红烧HEAD</b></span>
+                </div>
+            </div>
+            <div class="cook">
+                <button class="chef chef4">
+                    <img src="./picture/iconfinder_Chef-2_379358.png" alt="cook" class="cook">
+                </button>
+                <button class="delete"><strong>X</strong></button>
+            </div>
+            <div class="cook">
+                <button class="chef chef5" id="chef5" onclick="Add()">
+                    <img src="./picture/iconfinder_Chef-2_379358.png" alt="cook" class="cook chef5" id="img1">
+                    <h3 class="add" id="add1">+</h3>
+                </button>
+            </div>
+            <div class="cook">
+                <button class="chef chef6" id="chef6" onclick="Add()">
+                    <img src="./picture/iconfinder_Chef-2_379358.png" alt="cook" class="cook chef5" id="img2">
+                    <h3 class="add" id="add2">+</h3>
+                </button>
+            </div>
+        </div>
+        <div class="customerarea">
+            <div class="cust cust1">
+                <div class="chair chair1">
+                    <img src="./picture/379444-512.png" alt="customer" class="customer">
+                </div>
+                <img src="./picture/iconfinder_Instagram_UI-07_2315589.png" alt="heart" class="heart">
+                <div class="food food1">
+                    <ul class="row row1">
+                        <li>UL炖LI</li>
+                        <li>鲜榨flex</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cust cust2">
+                <div class="chair chair2">
+                    <img src="./picture/379446-512.png" alt="customer" class="customer">
+                </div>
+                <img src="./picture/iconfinder_Euro-Coin_379523.png" alt="coin" class="coin">
+                <div class="food food2">
+                    <ul class="row row2">
+                        <li>UL炖LI</li>
+                        <li>UL炖LI</li>
+                        <li>UL炖LI</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cust cust3">
+                <div class="chair chair3">
+                    <img src="./picture/379339-512.png" alt="customer" class="customer">
+                </div>
+                <div class="food food3">
+                    <ul class="row row3">
+                        <li>UL炖LI</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cust cust4">
+                <div class="chair chair4">
+                    <img src="./picture/379448-512.png" alt="customer" class="customer">
+                </div>
+                <img src="./picture/iconfinder_Euro-Coin_379523.png" alt="coin" class="coin">
+                <div class="food food4">
+                    <ul class="row row4">
+                        <li>UL炖LI</li>
+                        <li>鲜榨flex</li>
+                        <li>红烧HEAD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="waitarea">
+            <div class="wait wait1">
+                <div class="man man1">
+                    <img src="./picture/iconfinder_Man-16_379485.png" alt="waitman" class="man">
+                </div>
+                <div class="waitprog waitprog1">等位中</div>
+            </div>
+            <div class="wait wait2">
+                <div class="man man1">
+                    <img src="./picture/iconfinder_Rasta_379441.png" alt="waitman" class="man">
+                </div>
+                <div class="waitprog waitprog2">等位中</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="invite" id="invite">
+        <div class="title">
+            <h3 class="title">招聘新厨师</h3>
+        </div>
+        <div class="para">
+            <p class="para"><strong>招聘一名新厨师可以帮你更快地为顾客烹饪菜肴，<br>
+                增加餐厅收入。你最多可以拥有六名厨师。<br>
+                但每个厨师每周需要你支付工资￥100<br>
+                请问你确认新招聘一名厨师吗?</strong>
+            </p>
+        </div>
+
+        <div class="btn">
+            <button class="confirm" id="confirm" onclick="Confirm()"><strong>是的，确认招聘</strong></button>
+            <button class="refuse" id="refuse" onclick="Refuse()"><strong>先不了</strong></button>
+        </div>
+    </div>
+
+    <script src="./homework.js"></script>
+</body>
+</html>

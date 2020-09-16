@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>web resturant</title>
+    <link rel="stylesheet" type="text/css" href="webmooc.css">
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="date">
+            <p class="time">W12 D5</p>
+        </div>
+        <div class="input">
+            <p class="money" id="money">1948343</p>
+        </div>
+        <div class="cook">
+            <table border="1" class="cook-tab">
+                <tr>
+                    <td>
+                        <div class="sencond">
+                            <button class="chef chef1">
+                                <img src="./ifetaskasset/iconfinder_Chef-2_379358.png" alt="cook">
+                            </button>
+                        </div>
+                        <div class="first">
+                            <progress class="work work2" value="50" max="100"></progress>
+                            <span class="work1"><b>UL炖LI</b></span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="second">
+                            <button class="chef chef2">
+                                <img src="./ifetaskasset/iconfinder_Chef-2_379358.png" alt="cook">
+                            </button>
+                            <img src="./ifetaskasset/iconfinder_Food-Dome_379366.png" alt="food-dome" class="food-dome">
+                        </div>
+                        <div class="first">
+                            <progress class="work work2" value="100" max="100"></progress>
+                            <span class="work2"><b>鲜榨flex</b></span>
+                        </div>
+
+                    </td>
+                    <td>
+                        <div class="second">
+                            <button class="chef chef3">
+                                <img src="./ifetaskasset/iconfinder_Chef-2_379358.png" alt="cook">
+                            </button>
+                        </div>
+                        <div class="first">
+                            <progress class="work work2" value="80" max="100"></progress>
+                            <span class="work3"><b>红烧HEAD</b></span>
+                        </div>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="second">
+                            <button class="chef chef4">
+                                <img src="./ifetaskasset/iconfinder_Chef-2_379358.png" alt="cook">
+                            </button>
+                            <button class="delete"><strong>X</strong></button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="second">
+                            <button class="chef chef5" id="chef5" onclick="Add()">
+                                <img src="./ifetaskasset/iconfinder_Chef-2_379358.png" alt="cook" class="chef5" id="img1">
+                                <h3 class="add" id="add1">+</h3>
+                            </button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="second">
+                            <button class="chef chef6" id="chef6" onclick="Add()">
+                                <img src="./ifetaskasset/iconfinder_Chef-2_379358.png" alt="cook" class="chef5" id="img2">
+                                <h3 class="add" id="add2">+</h3>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="customer">
+            <table border="1" class="customer-tab">
+                <tr>
+                    <td>
+                        <div class="second">
+                            <button class="cust cust1">
+                                <img src="./ifetaskasset/379444-512.png" alt="customer">
+                            </button>
+                        </div>
+                        <img src="./ifetaskasset/iconfinder_Instagram_UI-07_2315589.png" alt="heart" class="heart">
+                        <div class="third">
+                            <ul class="row1 cust1">
+                                <li>UL炖LI</li>
+                                <li>鲜榨flex</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="second">
+                            <button class="cust cust2">
+                                <img src="./ifetaskasset/379446-512.png" alt="customer">
+                            </button>
+                        </div>
+                        <img src="./ifetaskasset/iconfinder_Euro-Coin_379523.png" alt="coin" class="coin">
+                        <div class="third">
+                            <ul class="row1 cust2">
+                                <li>UL炖LI</li>
+                                <li>UL炖LI</li>
+                                <li>UL炖LI</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="second">
+                            <button class="cust cust3">
+                                <img src="./ifetaskasset/379339-512.png" alt="customer">
+                            </button>
+                        </div>
+                        <div class="third">
+                            <ul class="row2 cust3">
+                                <li>UL炖LI</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="second">
+                            <button class="cust cust4">
+                                <img src="./ifetaskasset/379448-512.png" alt="customer">
+                            </button>
+                        </div>
+                        <img src="./ifetaskasset/iconfinder_Euro-Coin_379523.png" alt="coin" class="coin coin2">
+                        <div class="third">
+                            <ul class="row2 cust4">
+                                <li>UL炖LI</li>
+                                <li>鲜榨flex</li>
+                                <li>红烧HEAD</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="waitman">
+            <div class="wait wait1">
+                <img src="./ifetaskasset/iconfinder_Man-16_379485.png" alt="waitman" class="wait wait1">
+                <span>等位中</span>
+            </div>
+            <div class="wait wait2">
+                <img src="./ifetaskasset/iconfinder_Rasta_379441.png" alt="waitman" class="wait wait2">
+                <span>等位中</span>
+            </div>
+        </div>
+    </div>
+    <div class="invite" id="invite">
+        <div class="title">
+            <h3 class="title">招聘新厨师</h3>
+        </div>
+        <div class="para">
+            <p class="para"><strong>招聘一名新厨师可以帮你更快地为顾客烹饪菜肴，<br>
+                增加餐厅收入。你最多可以拥有六名厨师。<br>
+                但每个厨师每周需要你支付工资￥100<br>
+                请问你确认新招聘一名厨师吗?</strong>
+            </p>
+        </div>
+
+        <div class="btn">
+            <button class="confirm" id="confirm" onclick="Confirm()"><strong>是的，确认招聘</strong></button>
+            <button class="refuse" id="refuse" onclick="Refuse()"><strong>先不了</strong></button>
+        </div>
+    </div>
+
+    <script src="./webmooc.js"></script>
+</body>
+
+</html>

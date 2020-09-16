@@ -1,0 +1,352 @@
+div.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    background-image: url(./picture/dose-juice-sTPy-oeA3h0-unsplash.jpg);
+    background-size: cover;
+}
+div.header{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+div.cookarea, div.customerarea{
+    width: 95%;
+    margin-top: 10%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    border-radius: 20px;
+    background-color: rgb(255, 210, 77);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+div.customerarea{
+    background-color: rgb(255, 166, 77);
+}
+div.waitarea{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-right: 10px;
+    position: relative;
+    margin-top: -28px;
+}
+
+div.date,div.input{
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: rgb(140, 105, 0);
+    background: linear-gradient(180deg,rgb(255,230,153) 50%,rgb(255,210,77) 50%);
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+p.time{
+    padding: 0 25px;
+}
+div.input{
+    display: flex;
+    justify-content: end;
+}
+p.money{
+    padding-left: 50px;
+    padding-right: 10px;
+}
+
+ div.cook{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 23px;
+    position: relative;
+} 
+button.chef{
+    display: inline-flex;
+    width: 95px;
+    height: 95px;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: white;
+}
+button.chef1{
+    background: linear-gradient(90deg,rgb(255,145,34) 50%,rgb(217,109,0) 50%);
+}
+button.chef2{
+    background: linear-gradient(90deg,rgb(172,145,255) 50%,rgb(122,77,255) 50%);
+}
+button.chef3{
+    background: linear-gradient(90deg,rgb(255,145,34) 50%,rgb(217,109,0) 50%);
+}
+button.chef4{
+    background: linear-gradient(90deg,rgb(221,221,221) 50%,rgb(177,177,177) 50%);
+}
+img.chef5{
+    filter: brightness(500%);
+}
+button.chef6{
+    display: none;
+}
+img.cook{
+    width: 95px;
+    height: 95px;
+    margin: 20px 0;
+}
+div.prog{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+progress.work{
+    position: absolute;
+    border-style: solid;
+    border-width:3px;
+    border-color: white;
+    width: 90%;
+    height: 25px;
+    margin-top: -30px;
+}
+span.menu{
+    position: absolute;
+    margin-top: -30px;
+    padding-top: 5px;
+    font-size: 13px;
+    color: white;
+}
+progress.work1::-webkit-progress-bar{
+    background-color: rgb(255,145,34);
+}
+progress.work1::-webkit-progress-value{
+    background-color: rgb(217,109,0);
+}
+progress.work2::-webkit-progress-bar{
+    background-color: rgb(122,77,255);
+}
+progress.work2::-webkit-progress-value{
+    background-color: rgb(172,145,255);
+}
+progress.work3::-webkit-progress-bar{
+    background-color: rgb(255,145,34);
+}
+progress.work3::-webkit-progress-value{
+    background-color: rgb(217,109,0);
+}
+button.delete{
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 40px;
+    align-self: flex-end;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: rgb(204, 153, 121);
+}
+h3.add{
+    position: absolute;
+    font-size: 50px;
+    color: rgb(204, 153, 121);
+    top: -10px;
+}
+img.food-dome{
+    position: absolute;
+    width: 70%;
+    height: auto;
+    align-self: flex-start;
+    left: -10px;
+    top: 52px;
+}
+
+div.cust{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 18px;
+    position: relative;
+} 
+img.customer{
+    width: 80px;
+    height: 80px;
+}
+div.chair{
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.chair1{
+    background: linear-gradient(90deg,rgb(102,26,0) 50%,rgb(64,16,0) 50%);
+}
+div.chair2{
+    background: linear-gradient(90deg,rgb(128,255,0) 50%,rgb(0,178,0) 50%);
+}
+div.chair3{
+    background: linear-gradient(90deg,rgb(255,145,34) 50%,rgb(217,109,0) 50%);
+}
+div.chair4{
+    background: linear-gradient(90deg,rgb(128,255,0) 50%,rgb(0,178,0) 50%);
+}
+ul.row{
+    list-style-type: none;
+}
+li{
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    text-align: center;
+    margin-left: -60px;
+    padding: 2px 15px;
+    font-size: 12px;
+    color: white;
+    width: 59px;
+    margin-top: 5px;
+}
+ul.row1 > li{
+    background-color: rgb(83, 83, 98);
+    text-decoration: line-through;
+}
+ul.row2 > li{
+    background-color: rgb(0,178,0);
+}
+ul.row3 > li{
+    background: linear-gradient(-90deg,rgb(255,145,34) 50%,rgb(217,109,0) 50%);
+}
+ul.row4 :nth-child(-n+2){
+    background-color: rgb(0,178,0);
+}
+ul.row4 :last-child{
+    background-color: rgb(83, 83, 98);
+    text-decoration: line-through;
+}
+img.heart, img.coin{
+    position: absolute;
+    width: 35%;
+    height: auto;
+    z-index: 1;
+    left: -20px;
+    top: 55px;
+}
+
+div.wait{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+div.wait1{
+    position: relative;
+    margin-right: -22px;
+    z-index: 1;
+}
+div.man{
+    width: 70px;
+    height: 70px;
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 50%;
+    border-color: white;
+    background: linear-gradient(90deg,rgb(38,147,255) 50%,rgb(0,109,217) 50%);
+}
+img.man{
+    width: 70px;
+    height: 70px;
+}
+div.waitprog{
+    position: relative;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    padding: 2px 15px;
+    font-size: 12px;
+    margin-top: -18px;
+}
+div.waitprog1{
+    background: linear-gradient(-90deg,rgb(38,147,255) 50%,rgb(0,109,217) 50%);
+}
+div.waitprog2{
+    background-color: rgb(38, 147, 255);
+}
+
+div.invite{
+    width: 90%;
+    height: auto;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: white;
+    background-color: rgb(255,210,77);
+    position: absolute;
+    z-index: 1;
+    top: 250px;
+    left: 15px;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+h3.title{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(140, 105, 0);
+}
+p.para{
+    font-size: 13px;
+    margin-top: -10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(140, 105, 0);
+    line-height: 25px;
+}
+div.btn{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+button.confirm{
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: rgb(140, 105, 0);
+    color: rgb(140, 105, 0);
+    font-size: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(180deg,rgb(255,230,153) 50%,rgb(255,210,77) 50%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+button.refuse{
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: rgb(140, 105, 0);
+    color: rgb(140, 105, 0);
+    font-size: 16px;
+    padding: 10px 20px;
+    background: linear-gradient(180deg,rgb(255,230,153) 50%,rgb(255,210,77) 50%);
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,84 @@
+body{
+    background-image: url('C:\\Users\\HP\\Pictures\\Saved Pictures\\布加迪Bugatti Divo跑车4k壁纸\\coolcar.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.demo1{
+    border: black;
+    outline:red dotted;
+    margin-left: 25%;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;  
+    background-color: black;
+}
+.dropdown{
+    border-right: 1px solid white;
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: fixed;
+    background-color:black;
+    width: 200px;
+    /*box-shadow: 0px,8px,16px,0px rgba(0,0,0,0.2);*/
+}
+.dropdown-content a{
+    color: white;
+    padding:14px,12px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: green;
+}
+.dropbtn{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown:hover .dropbtn{
+    background-color: green;
+}
+input[type=text],input[type=password],select{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit]{
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    background-color: yellowgreen;
+}
+.test{
+    border: none;
+    border-radius: 4px;
+    background-color: wheat;
+    padding: 20px;
+}
