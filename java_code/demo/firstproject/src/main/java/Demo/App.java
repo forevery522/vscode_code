@@ -8,6 +8,11 @@ public class App
 {
     public static void main( final String[] args)
     {
-        System.out.println( "Hello World!" );
+        int[] id;
+        id = new int[10];
+        for (int i = 0; i < id.length; i++){
+            id[i] = i;
+        }
+        System.out.println(id);
     }
 }
