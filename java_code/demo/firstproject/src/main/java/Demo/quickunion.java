@@ -12,16 +12,17 @@ public class quickunion {
             }
         }
     public static void main(String[] args) {
-        Scanner nScanner = new Scanner(System.in);
-        int N = nScanner.nextInt();
+        int N = 10;
         quickunion qk = new quickunion(N);
-        while (true) {
+        int count = 8;
+        while (count>0) {
             Scanner pScanner = new Scanner(System.in);
             Scanner qScanner = new Scanner(System.in);
             int p = pScanner.nextInt();
             int q = qScanner.nextInt();
             System.out.println("result:");
             qk.union(p, q);
+            count--;
         }
     }
     public int find(int p) {
