@@ -1,15 +1,15 @@
 from numpy import *
 import operator
-import math
 
 
 def fileMartix(filename):
     file = open(filename)
-    numoflines = len(file.readlines())
+    filelines = file.readlines()
+    numoflines = len(filelines)
     returnMat = zeros((numoflines,3))
     index = 0
     labelvectors = []
-    for line in file.readlines():
+    for line in filelines:
         line = line.strip()
         listofline = line.split('\t')
         returnMat[index,:] = listofline[0:3]
@@ -30,7 +30,7 @@ def classify(testData, dataSet, label, k):
     diffData = tile(testData,(xlenth,1)) - dataSet
     sqData = diffData ** 2
     addsqData = sqData.sum(axis = 1)
-    distances = math.sqrt(addsqData)
+    distances = sqrt(addsqData)
 
     '''
     sort the distance
@@ -40,7 +40,7 @@ def classify(testData, dataSet, label, k):
     for i in range(k):
         voteLabel = label[sortDistance[i]]
         Count[voteLabel] = Count.get(voteLabel, 0) + 1
-        sortCount = sorted(Count.items(), key = operator.itemgetter(1), reverse = True)
+        sortCount = sorted(list(Count.items()), key = operator.itemgetter(1), reverse = True)
     return sortCount[0][0]
 
 def autoNorm(dataSet):   #autoDataSet = (dataSet - minval) / (maxval - minval)
@@ -54,10 +54,27 @@ def autoNorm(dataSet):   #autoDataSet = (dataSet - minval) / (maxval - minval)
     return autoDataSet, minval, ranges
 
 def dataClassTest():
+    dataMat, labels = fileMartix('datingTestSet2.txt')
+    ratio = 0.1  #ratio of testData
+    numOfx = dataMat.shape[0]
+    numOfTest = int(numOfx * ratio)
+    normDataSet, minval, ranges = autoNorm(dataMat)
+    errorCount = 0.0
+    for i in range(numOfTest):
+        classifyResult = classify(normDataSet[i], normDataSet[numOfTest:numOfx], labels[numOfTest:numOfx],3)
+        if (classifyResult != labels[i]):
+            errorCount += 1
+    errorRatio = errorCount / numOfTest
+    print("the errorRatio is:",errorRatio)
+
+def classReal():
     pass
 
 def main():
     dataClassTest()
+    # group, label = createDataSet()
+    # result = classify([1.1,1.0], group, label, 2)
+    # print(result)
 
 if __name__ == '__main__':
     main()   
