@@ -68,7 +68,15 @@ def dataClassTest():
     print("the errorRatio is:",errorRatio)
 
 def classReal():
-    pass
+    resultlist = ['not at all','in small doses','in large doses']
+    percent = float(input('percentage of time playing games?'))
+    filermiles = float(input('frequent filer miles earned every year?'))
+    ice_cream = float(input('liters of ice cream consumed per year?'))
+    dataMat, labels = fileMartix('datingTestSet2.txt')
+    normDataSet, minval, ranges = autoNorm(dataMat)
+    inArr = array([filermiles, percent, ice_cream])
+    classresult = classify((inArr-minval)/ranges,normDataSet,labels,3)
+    print("You will probably like this person: ", resultlist[classresult - 1]) 
 
 def main():
     dataClassTest()
