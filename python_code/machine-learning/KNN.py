@@ -12,7 +12,7 @@ def fileMartix(filename):
     for line in filelines:
         line = line.strip()
         listofline = line.split('\t')
-        returnMat[index,:] = listofline[0:3]
+        returnMat[index] = listofline[0:3]
         labelvectors.append(listofline[-1])
         index += 1
     return returnMat, labelvectors
@@ -26,8 +26,8 @@ def classify(testData, dataSet, label, k):
     '''
     calculate Euclidean Distance
     '''
-    xlenth = dataSet.shape[0]
-    diffData = tile(testData,(xlenth,1)) - dataSet
+    xlength = dataSet.shape[0]
+    diffData = tile(testData,(xlength,1)) - dataSet
     sqData = diffData ** 2
     addsqData = sqData.sum(axis = 1)
     distances = sqrt(addsqData)
@@ -47,10 +47,11 @@ def autoNorm(dataSet):   #autoDataSet = (dataSet - minval) / (maxval - minval)
     m = dataSet.shape[0]
     minval = dataSet.min(0)
     maxval = dataSet.max(0)
-    minval = tile(minval,(m,1))
-    maxval = tile(maxval,(m,1))
+    minval_t = tile(minval,(m,1))
+    maxval_t = tile(maxval,(m,1))
     ranges = maxval - minval
-    autoDataSet = (dataSet - minval) / ranges
+    ranges_t = maxval_t - minval_t
+    autoDataSet = (dataSet - minval_t) / ranges_t
     return autoDataSet, minval, ranges
 
 def dataClassTest():
@@ -76,13 +77,13 @@ def classReal():
     normDataSet, minval, ranges = autoNorm(dataMat)
     inArr = array([filermiles, percent, ice_cream])
     classresult = classify((inArr-minval)/ranges,normDataSet,labels,3)
-    print("You will probably like this person: ", resultlist[classresult - 1]) 
+    print("You will probably like this person: ", resultlist[int(classresult) - 1]) 
 
 def main():
-    dataClassTest()
     # group, label = createDataSet()
     # result = classify([1.1,1.0], group, label, 2)
     # print(result)
-
+    # dataClassTest()
+    classReal()
 if __name__ == '__main__':
     main()   
