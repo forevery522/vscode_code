@@ -36,7 +36,6 @@ public class quickfind {
         }
         for (int i = 0; i < id.length; i++){
             System.out.println(id[i]);
-        }
-        
+        } 
     }
 }
