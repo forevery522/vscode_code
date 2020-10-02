@@ -1,0 +1,19 @@
+{
+    "editor.formatOnType": true, 
+    "editor.snippetSuggestions": "top",
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt -lglut32 -lglu32 -lopengl32 && $dir$fileNameWithoutExt",
+    
+    }, 
+    "code-runner.saveFileBeforeRun": true, 
+    "code-runner.preserveFocus": true, 
+    "code-runner.clearPreviousOutput": false, 
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.intelliSenseEngine": "Default", 
+    "C_Cpp.errorSquiggles": "Disabled", 
+    "C_Cpp.autocomplete": "Disabled",
+    
+  }
+  

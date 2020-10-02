@@ -8,7 +8,10 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-lglut32",
+                "-lglu32",
+                "-lopengl32",
             ],
             "options": {
                 "cwd": "D:\\vc++6.0\\Dev-Cpp\\MinGW64\\bin"

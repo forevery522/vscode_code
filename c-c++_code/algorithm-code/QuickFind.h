@@ -25,10 +25,13 @@ public:
         {
             if(id[i] == pID) id[i] = qID;
         }
-        for (int i = 0; i < id_length; i++)
-        {
-            cout << id[i] << endl;
-        }
+        // for (int i = 0; i < id_length; i++)
+        // {
+        //     cout << id[i] << endl;
+        // }
+    }
+    bool connected(int p, int q){
+        return(find(p)==find(q));
     }
     ~QuickFind(){
         delete []id;
@@ -36,20 +39,20 @@ public:
     }
 };
 
-int main(){
-    int N,p,q;
-    cout << "N:" << endl;
-    cin >> N;
-    QuickFind qk(N);
-    int count = N-2;
-    while (count > 0)
-    {   
-        cout << "p:" << endl;
-        cin >> p;
-        cout << "q:" << endl;
-        cin >> q;
-        qk.Union(p,q,N);
-        count--;
-    }
-    return 0;
-}
+// int main(){
+//     int N,p,q;
+//     cout << "N:" << endl;
+//     cin >> N;
+//     QuickFind qk(N);
+//     int count = N-2;
+//     while (count > 0)
+//     {   
+//         cout << "p:" << endl;
+//         cin >> p;
+//         cout << "q:" << endl;
+//         cin >> q;
+//         qk.Union(p,q,N);
+//         count--;
+//     }
+//     return 0;
+// }
