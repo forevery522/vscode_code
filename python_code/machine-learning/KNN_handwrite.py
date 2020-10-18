@@ -1,6 +1,7 @@
 from numpy import *
 import operator
 import os
+from math import *
 
 file = open('./testDigits/0_0.txt')
 file_lines = file.readlines()

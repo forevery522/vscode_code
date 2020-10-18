@@ -1,5 +1,6 @@
 from numpy import *
 import operator
+from math import *
 
 
 def fileMartix(filename):
