@@ -1,3 +1,6 @@
+import numpy as np
+import math
+
 def loadDataSet():
     postinglist = [['my', 'dog', 'has', 'flea', 'problems', 'help', 'please'], 
                    ['maybe', 'not', 'take', 'him', 'to', 'dog', 'park', 'stupid'],
@@ -22,3 +25,44 @@ def setOfwords2vec(vocablist, inputSet):
         else:
             print("the word: %s is not in the vocabulary!" %word)
     return returnVec
+
+def trainNB(trainMartix, trainCategory):
+    numTrainDocs = len(trainMartix)
+    numWords = len(trainMartix[0])
+    pAbusive = sum(trainCategory) / float(numTrainDocs)
+    p0Num = np.ones(numWords)
+    p1Num = np.ones(numWords)
+    p0Denom = 2.0
+    p1Denom = 2.0
+    for i in range(numTrainDocs):
+        if trainCategory[i] == 1:
+            p1Num += trainMartix[i]
+            p1Denom += sum(trainMartix[i])
+        elif trainCategory[i] == 0:
+            p0Num += trainMartix[i]
+            p1Denom += sum(trainMartix[i])
+    p1Vect = math.log(p1Num / p1Denom) 
+    p0Vect = math.log(p0Num / p0Denom)
+    return p0Vect, p1Vect, pAbusive
+
+def classifyNB(vec2Classify, p0Vect, p1Vect, pAbusive):
+    p1 = sum(vec2Classify * p1Vect) + math.log(pAbusive)
+    p0 = sum(vec2Classify * p0Vect) + math.log(1.0 - pAbusive)
+    if p1 > p0:
+        return 1
+    else:
+        return 0
+
+def testingNB():
+    listOPosts, listClasses = loadDataSet()
+    myVocablist = creatVocablist(listOPosts)
+    trainMat = []
+    for postinDoc in listOPosts:
+        trainMat.append(setOfwords2vec(myVocablist, postinDoc))
+    p0vec, p1vec, pAb = trainNB(np.array(trainMat), np.array(listClasses))
+    testEntry = ['love', 'my', 'dalmation']
+    thisDoc = np.array(setOfwords2vec(myVocablist, testEntry))
+    print("the classify is ", classifyNB(thisDoc, p0vec, p1vec, pAb))
+
+if __name__ == '__main__':
+    testingNB()
