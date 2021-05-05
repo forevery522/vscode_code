@@ -1,5 +1,4 @@
 import numpy as np
-import math
 
 def loadDataSet():
     postinglist = [['my', 'dog', 'has', 'flea', 'problems', 'help', 'please'], 
@@ -12,7 +11,7 @@ def loadDataSet():
     return postinglist, classvec
 
 def creatVocablist(dataSet):
-    vocabset = set([])
+    vocabset = set()
     for document in dataSet:
         vocabset = vocabset | set(document)
     return list(vocabset)
@@ -29,7 +28,7 @@ def setOfwords2vec(vocablist, inputSet):
 def trainNB(trainMartix, trainCategory):
     numTrainDocs = len(trainMartix)
     numWords = len(trainMartix[0])
-    pAbusive = sum(trainCategory) / float(numTrainDocs)
+    pAbusive = np.sum(trainCategory) / float(numTrainDocs)
     p0Num = np.ones(numWords)
     p1Num = np.ones(numWords)
     p0Denom = 2.0
@@ -37,17 +36,17 @@ def trainNB(trainMartix, trainCategory):
     for i in range(numTrainDocs):
         if trainCategory[i] == 1:
             p1Num += trainMartix[i]
-            p1Denom += sum(trainMartix[i])
+            p1Denom += np.sum(trainMartix[i])
         elif trainCategory[i] == 0:
             p0Num += trainMartix[i]
-            p1Denom += sum(trainMartix[i])
-    p1Vect = math.log(p1Num / p1Denom) 
-    p0Vect = math.log(p0Num / p0Denom)
+            p0Denom += np.sum(trainMartix[i])
+    p1Vect = np.log(p1Num / p1Denom) 
+    p0Vect = np.log(p0Num / p0Denom)
     return p0Vect, p1Vect, pAbusive
 
 def classifyNB(vec2Classify, p0Vect, p1Vect, pAbusive):
-    p1 = sum(vec2Classify * p1Vect) + math.log(pAbusive)
-    p0 = sum(vec2Classify * p0Vect) + math.log(1.0 - pAbusive)
+    p1 = np.sum(vec2Classify * p1Vect) + np.log(pAbusive)
+    p0 = np.sum(vec2Classify * p0Vect) + np.log(1.0 - pAbusive)
     if p1 > p0:
         return 1
     else:
@@ -60,9 +59,9 @@ def testingNB():
     for postinDoc in listOPosts:
         trainMat.append(setOfwords2vec(myVocablist, postinDoc))
     p0vec, p1vec, pAb = trainNB(np.array(trainMat), np.array(listClasses))
-    testEntry = ['love', 'my', 'dalmation']
+    testEntry = ['stupid', 'garbage']
     thisDoc = np.array(setOfwords2vec(myVocablist, testEntry))
-    print("the classify is ", classifyNB(thisDoc, p0vec, p1vec, pAb))
+    print("the classify is {}".format(classifyNB(thisDoc, p0vec, p1vec, pAb)))
 
 if __name__ == '__main__':
     testingNB()

@@ -1,6 +1,6 @@
 ### First day: 
 *** 
- I learned KNN, and I knowed how to calculate the Euclidean Distance, and I tried to achive the first basic project. I want to say, I feel so interesting now!  
+ I learned KNN, and I knowed how to calculate the Euclidean Distance, and I tried to achive the first basic project. I want to say, I feel so interesting now! 
 
  *everyday sharing: True mastery of any skill takes a lifetime.*  
 

@@ -1,2 +1,1 @@
-USE test;
-SELECT * FROM schoolifo;
+drop database spj;
